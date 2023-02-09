@@ -1,6 +1,6 @@
 # advice
 
-Do you need a advice today? This site is here for you!
+Do you need an advice today? This site is here for you!
 
 ___Get an advice and don't forget: Life Goes On!___ 🍃
 
