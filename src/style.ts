@@ -10,6 +10,7 @@ export const Container = styled.div<IContainer>`
   top: 0;
   left: 0;
   padding: 6rem;
+  overflow-y: hidden;
 
   
   @media(max-width: 1000px){
