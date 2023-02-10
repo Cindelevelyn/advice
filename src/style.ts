@@ -24,6 +24,7 @@ export const Container = styled.div<IContainer>`
       text-align: center;
       width: 18rem;
       font-size: 30px!important;
+      margin-bottom: 2rem;
     }
   }
 
