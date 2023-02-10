@@ -4,7 +4,7 @@ Do you need an advice today? This site is here for you!
 
 ___Get an advice and don't forget: Life Goes On!___ 🍃
 
-![Group 3](https://user-images.githubusercontent.com/60244854/217936421-afe18427-ee18-45d3-aae8-27d3be5662e3.png)
+![Group 6](https://user-images.githubusercontent.com/60244854/218134050-a840f2d3-659c-491c-9b16-e3d625f81762.png)
 
 
 ___With Dark/Light Mode and you also can share with your friends!___
