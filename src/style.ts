@@ -106,7 +106,11 @@ export const BtnShare = styled.button<IContainer>`
   margin-right: 1rem;
   
   transition: 0.5s;
-
+  
+  span{
+    margin-top: 5px;
+  }
+  
   ${(props) =>
     !props.isLight && css`
     

@@ -1,9 +1,8 @@
 import { useEffect, useState } from 'react'
 import { BtnShare, Container, ThemeBtn } from './style'
 import { api } from './services/api'
-import { Link } from 'react-router-dom';
-
-import { IoLogoTwitter, IoMdLink } from 'react-icons/io'
+import { TwitterShareButton, WhatsappShareButton } from 'react-share';
+import { IoLogoTwitter, IoLogoWhatsapp } from 'react-icons/io'
 
 import Lateral from './assets/icons/LightTheme/Lateral'
 import { LateralDark } from './assets/icons/DarkTheme/LateralDark'
@@ -14,18 +13,15 @@ import './index.css'
 function App() {
   const [isLightTheme, setLightTheme] = useState(true)
   const [advice, setAdvice] = useState("")
-  const [link, setLink] = useState("")
 
   function changeTheme() {
     setLightTheme(!isLightTheme)
   }
 
-
   useEffect(() => {
     api.get("/advice")
       .then((res) => {
         setAdvice(res.data['slip']['advice'])
-        setLink(`https://twitter.com/intent/tweet?text=${advice}`)
       })
       .catch((err) =>
         console.log("ops! houve um erro: " + err))
@@ -54,14 +50,26 @@ function App() {
 
       <h1 className='advice'>{advice}</h1>
       <div className='buttons'>
-        {/* <Link to={link}> */}
-        <BtnShare isLight={isLightTheme}>
-          <IoLogoTwitter size={20} />
-          tweet</BtnShare>
-        {/* </Link> */}
-        <BtnShare isLight={isLightTheme}>
-          <IoMdLink size={20} />
-          share</BtnShare>
+        <TwitterShareButton
+          url='https://cici-advice.vercel.app'
+          title={`this is my advice: ${advice}`}
+          hashtags={['ciciconselhos']}
+        >
+          <BtnShare isLight={isLightTheme}>
+            <IoLogoTwitter size={20} />
+            <span>tweet</span>
+          </BtnShare>
+        </TwitterShareButton>
+        <WhatsappShareButton
+          title={`this is my advice: ${advice}`}
+          url={'https://cici-advice.vercel.app'}
+          separator={'\n'}
+        >
+          <BtnShare isLight={isLightTheme}>
+            <IoLogoWhatsapp size={20} />
+            <span>share</span>
+          </BtnShare>
+        </WhatsappShareButton>
       </div>
     </Container >
   )
