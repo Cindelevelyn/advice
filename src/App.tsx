@@ -44,7 +44,7 @@ function App() {
         </>
       }
 
-      <p>this is your daily advice:</p>
+      <p>this is your advice:</p>
 
       <div className='line' />
 
