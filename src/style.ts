@@ -11,6 +11,21 @@ export const Container = styled.div<IContainer>`
   left: 0;
   padding: 6rem;
 
+  
+  @media(max-width: 1000px){
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    .advice{
+      text-align: center;
+      width: 18rem;
+      font-size: 30px!important;
+    }
+  }
+
   p {
     opacity: 70%;
     font-family: 'Alata', sans-serif;
@@ -61,8 +76,14 @@ export const ThemeBtn = styled.button`
   background: transparent;
   border: 0;
   cursor: pointer;
+  z-index: 1000;
   
   transition: 2s;
+
+  @media(max-width: 1000px){
+    margin-bottom: -4rem;
+    margin-top: -5rem;
+  }
 `
 
 export const BtnShare = styled.button<IContainer>`
@@ -98,6 +119,5 @@ export const BtnShare = styled.button<IContainer>`
   &:hover{
     background: #333333;
   }
-
 
 `

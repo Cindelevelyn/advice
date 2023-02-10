@@ -54,9 +54,11 @@ function App() {
 
       <h1 className='advice'>{advice}</h1>
       <div className='buttons'>
-          <BtnShare isLight={isLightTheme}>
-            <IoLogoTwitter size={20} />
-            tweet</BtnShare>
+        {/* <Link to={link}> */}
+        <BtnShare isLight={isLightTheme}>
+          <IoLogoTwitter size={20} />
+          tweet</BtnShare>
+        {/* </Link> */}
         <BtnShare isLight={isLightTheme}>
           <IoMdLink size={20} />
           share</BtnShare>
